@@ -1,0 +1,12 @@
+<h1>Welcome to RetFlix!</h1>
+<h2>See our collection of movies below</h2>
+
+<ul>
+
+<% @movies.each do |movie|%>
+<li><%=movie.title%>
+<p><%=movie.description%></p>
+</li>
+<% end %>
+</ul>
+

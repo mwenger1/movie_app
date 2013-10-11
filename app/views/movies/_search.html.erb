@@ -1,0 +1,12 @@
+<br />
+<%= form_tag "/", method: "GET" do %>
+	<%= text_field_tag :q,  params[:q], :autofocus=>true %>
+	<br><br>
+Filter the results:
+	<%= select_tag "order", "<option>Title</option><option>Description</option><option>year_released</option><option>Rating</option>".html_safe %>
+<br><br>
+	<%= submit_tag "Search" %>
+<hr>
+<% end %>
+
+<br />

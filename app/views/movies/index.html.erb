@@ -1,12 +1,19 @@
 <h1>Welcome to RetFlix!</h1>
 <h2>See our collection of movies below</h2>
 
-<ul>
+<%= link_to "Add a Movie", new_movie_path() %>
+<br>
+<br>
 
-<% @movies.each do |movie|%>
-<li><%=movie.title%>
-<p><%=movie.description%></p>
-</li>
+<%= render 'search' %>
+
+
+<% @movies.each do |movie| %>
+  <section style="margin-bottom:2em;">
+    <header style="margin"><%= link_to movie.title, movie_path(movie) %> <b>(<%= movie.year_released	%>)</b></header>
+    <p><%= movie.description %></p>
+    <p>Rating: <%= movie.rating %></p>
+  </section>
+  <hr>
 <% end %>
-</ul>
 

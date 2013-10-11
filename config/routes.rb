@@ -1,6 +1,7 @@
 Retflix::Application.routes.draw do
   root "movies#index"
 
+  resources :movies
   get "movies/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
